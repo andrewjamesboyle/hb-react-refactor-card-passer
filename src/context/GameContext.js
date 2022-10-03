@@ -15,4 +15,4 @@ const GameProvider = ({ children }) => {
   return <GameContext.Provider value={{ deck, setDeck, playerOneHand, setPlayerOneHand, selectedCard, setSelectedCard, playerTwoHand, setPlayerTwoHand, playerThreeHand, setPlayerThreeHand, from, setFrom, to, setTo }}>{children}</GameContext.Provider>;
 };
 
-export { GameProvider, GameContext };
+export { GameContext, GameProvider };

@@ -1,12 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import GameProvider from './context/GameContext';
+import { GameProvider } from './context/GameContext';
+
 
 test('renders different players', () => {
-  render(
-    <GameProvider>
-      <App />
-    </GameProvider>);
+  render(<GameProvider><App /></GameProvider>);
   const player1 = screen.getByText(/Player 1/i);
   const player2 = screen.getByText(/Player 2/i);
   const player3 = screen.getByText(/Player 3/i);
