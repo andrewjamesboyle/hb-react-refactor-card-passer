@@ -6,7 +6,7 @@ import ExecutePassButton from './components/ExecutePassButton';
 import { GameContext } from '../src/context/GameContext';
 
 function App() {
-  const { to, setTo, from, setFrom, deck, setDeck, playerOneHand, playerTwoHand, playerThreeHand, setPlayerOneHand, setPlayerTwoHand, setPlayerThreeHand, selectedCard, setSelectedCard } = useContext(GameContext);
+  const { to, from, deck, setDeck, playerOneHand, playerTwoHand, playerThreeHand, setPlayerOneHand, setPlayerTwoHand, setPlayerThreeHand, selectedCard, setSelectedCard } = useContext(GameContext);
 
   function findCardIndex(value, suit, cards) {
     return cards.findIndex((card) => card.value === value && card.suit === suit);
@@ -42,34 +42,34 @@ function App() {
           
           player={1}
           hand={playerOneHand}
-          setFrom={setFrom}
-          selectedCard={selectedCard}
-          setTo={setTo}
+          
+          
+          
           setSelectedCard={setSelectedCard}
         />
         <Player
           
           player={2}
           hand={playerTwoHand}
-          setFrom={setFrom}
-          selectedCard={selectedCard}
-          setTo={setTo}
+          
+         
+          
           setSelectedCard={setSelectedCard}
         />
         <Player
           
           player={3}
           hand={playerThreeHand}
-          setFrom={setFrom}
-          selectedCard={selectedCard}
-          setTo={setTo}
+          
+          
+          
           setSelectedCard={setSelectedCard}
         />
         <CardList
           cards={deck}
-          selectedCard={selectedCard}
+          
           setSelectedCard={setSelectedCard}
-          setFrom={setFrom}
+          
           player={'deck'}
         />
       </section>
@@ -77,10 +77,10 @@ function App() {
         {selectedCard && (
           <ExecutePassButton
             passCard={passCard}
-            setFrom={setFrom}
+            
             from={from}
       
-            selectedCard={selectedCard}
+            
             setSelectedCard={setSelectedCard}
           />
         )}

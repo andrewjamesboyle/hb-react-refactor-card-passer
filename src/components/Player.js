@@ -5,13 +5,12 @@ import CardList from './CardList';
 
 export default function Player({
   player,
-  setTo,
   hand,
-  setFrom,
-  setSelectedCard,
-  selectedCard,
+  
+  
+
 }) {
-  const { to } = useContext(GameContext);
+  const { to, setTo } = useContext(GameContext);
   
   return (
     <div
@@ -22,9 +21,8 @@ export default function Player({
       <CardList
         player={player}
         cards={hand}
-        setFrom={setFrom}
-        selectedCard={selectedCard}
-        setSelectedCard={setSelectedCard}
+        
+      
       />
     </div>
   );
