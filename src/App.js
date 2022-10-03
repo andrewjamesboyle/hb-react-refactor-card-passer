@@ -6,9 +6,7 @@ import ExecutePassButton from './components/ExecutePassButton';
 import { GameContext } from '../src/context/GameContext';
 
 function App() {
-  const { to, from, deck, setDeck, playerOneHand, playerTwoHand, playerThreeHand, setPlayerOneHand, setPlayerTwoHand, setPlayerThreeHand, selectedCard, setSelectedCard } = useContext(GameContext);
-
-  
+  const { deck, playerOneHand, playerTwoHand, playerThreeHand, selectedCard } = useContext(GameContext);
 
   return (
     <div className="App">
