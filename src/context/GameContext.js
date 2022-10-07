@@ -16,5 +16,3 @@ const GameProvider = ({ children }) => {
 };
 
 export { GameContext, GameProvider };
-
-// this is a test
